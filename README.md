@@ -60,7 +60,7 @@ The correctness of each program is verified through simulation using Oregano 805
 | Output | P1 = 38H |
 | Status | ✅ Success |
 
-![ADD8](images/8_bit/ADD8.jpeg)
+![ADD8](images/8_Bit/ADD8.jpeg)
 
 ---
 
@@ -74,7 +74,7 @@ The correctness of each program is verified through simulation using Oregano 805
 | Output | P1 = 12H |
 | Status | ✅ Success |
 
-![SUB8](images/8_bit/SUB8.jpeg)
+![SUB8](images/8_Bit/SUB8.jpeg)
 
 ---
 
@@ -88,7 +88,7 @@ The correctness of each program is verified through simulation using Oregano 805
 | Output | P1 = 48H |
 | Status | ✅ Success |
 
-![MUL8](images/8_bit/MUL8.jpeg)
+![MUL8](images/8_Bit/MUL8.jpeg)
 
 ---
 
@@ -103,7 +103,7 @@ The correctness of each program is verified through simulation using Oregano 805
 | Output | p1_o = 09H, p2_o = 01H |
 | Status | ✅ Success |
 
-![DIV8](images/8_bit/DIV8.jpeg)
+![DIV8](images/8_Bit/DIV8.jpeg)
 
 ---
 
@@ -118,7 +118,7 @@ Program: **arith8_all.asm**
 | ModelSim Output | p0_o = 35H, p1_o = 15H, p2_o = 48H, p3_o = 09H |
 | Status | ✅ Success |
 
-![Arithmetic8](images/8_bit/arith8_all.jpeg)
+![Arithmetic8](images/8_Bit/arith8_all.jpeg)
 
 ---
 

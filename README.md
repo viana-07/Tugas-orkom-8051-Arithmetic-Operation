@@ -241,7 +241,7 @@ The report contains:
 ---
 
 # Author
-
-**Delvi**
+**Delviana Namira (24/542446/PA/23029), Khonsa Qonita Bahy (24/536263/PA/22753)
+Salima Rodhiyatul Fitriyah (24/539756/PA/22917), Sonia Azizah Pramesjvari (24/538796/PA/22873)**
 
 Computer Organization and Architecture Course Project

@@ -60,7 +60,7 @@ The correctness of each program is verified through simulation using Oregano 805
 | Output | P1 = 38H |
 | Status | ✅ Success |
 
-![ADD8](images/8-bit/ADD8.jpeg)
+![ADD8](images/8_bit/ADD8.jpeg)
 
 ---
 
@@ -74,7 +74,7 @@ The correctness of each program is verified through simulation using Oregano 805
 | Output | P1 = 12H |
 | Status | ✅ Success |
 
-![SUB8](images/8-bit/SUB8.jpeg)
+![SUB8](images/8_bit/SUB8.jpeg)
 
 ---
 
@@ -88,7 +88,7 @@ The correctness of each program is verified through simulation using Oregano 805
 | Output | P1 = 48H |
 | Status | ✅ Success |
 
-![MUL8](images/8-bit/MUL8.jpeg)
+![MUL8](images/8_bit/MUL8.jpeg)
 
 ---
 
@@ -103,7 +103,7 @@ The correctness of each program is verified through simulation using Oregano 805
 | Output | p1_o = 09H, p2_o = 01H |
 | Status | ✅ Success |
 
-![DIV8](images/8-bit/DIV8.jpeg)
+![DIV8](images/8_bit/DIV8.jpeg)
 
 ---
 
@@ -118,7 +118,7 @@ Program: **arith8_all.asm**
 | ModelSim Output | p0_o = 35H, p1_o = 15H, p2_o = 48H, p3_o = 09H |
 | Status | ✅ Success |
 
-![Arithmetic8](images/8-bit/arith8_all.jpeg)
+![Arithmetic8](images/8_bit/arith8_all.jpeg)
 
 ---
 
@@ -134,7 +134,7 @@ Program: **arith8_all.asm**
 | Output | p0_o = 26H, p1_o = 13H |
 | Status | ✅ Success |
 
-![ADD16](images/16-bit/ADD16.jpeg)
+![ADD16](images/16_bit/ADD16.jpeg)
 
 ---
 
@@ -148,7 +148,7 @@ Program: **arith8_all.asm**
 | Output | p0_o = 42H, p1_o = 11H |
 | Status | ✅ Success |
 
-![SUB16](images/16-bit/SUB16.jpeg)
+![SUB16](images/16_bit/SUB16.jpeg)
 
 ---
 
@@ -162,7 +162,7 @@ Program: **arith8_all.asm**
 | Output | p0_o = 48H, p1_o = 00H |
 | Status | ✅ Success |
 
-![MUL16](images/16-bit/MUL16.jpeg)
+![MUL16](images/16_bit/MUL16.jpeg)
 
 ---
 
@@ -177,7 +177,7 @@ Program: **arith8_all.asm**
 | Output | p0_o = 09H, p1_o = 00H, p2_o = 01H, p3_o = 00H |
 | Status | ✅ Success |
 
-![DIV16](images/16-bit/DIV16.jpeg)
+![DIV16](images/16_bit/DIV16.jpeg)
 
 ---
 
@@ -194,7 +194,7 @@ Program: **arith16_all.asm**
 | SUB Output | p2_o = 42H, p3_o = 11H |
 | Status | ✅ Success |
 
-![Arithmetic16](images/16-bit/Arith16_all.jpeg)
+![Arithmetic16](images/16_bit/Arith16_all.jpeg)
 
 ---
 

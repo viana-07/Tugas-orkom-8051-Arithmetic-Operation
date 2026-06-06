@@ -1,22 +1,27 @@
-# 8051 Arithmetic Operation
+# 8051 Arithmetic Operations Using Intel 8051 Assembly Language
 
-Implementation of **8-bit** and **16-bit arithmetic operations using Intel 8051 Assembly Language**.
+## Overview
+
+This repository contains the implementation of basic arithmetic operations on the Intel 8051 microcontroller using Assembly language. The project was developed for the Computer Organization and Architecture course to demonstrate how arithmetic instructions are executed on an 8-bit architecture.
+
+The implemented operations include:
+
+- 8-bit Addition
+- 8-bit Subtraction
+- 8-bit Multiplication
+- 8-bit Division
+- 16-bit Addition
+- 16-bit Subtraction
+- 16-bit Multiplication (Software Routine)
+- 16-bit Division (Software Routine)
+
+The correctness of each program is verified through simulation using Oregano 8051 and ModelSim.
 
 ---
 
-# 📖 Description
-
-This project was developed as part of the **Computer Organization (Organisasi Komputer)** course assignment.
-
-The objective of this project is to implement and analyze basic arithmetic operations on the Intel 8051 microcontroller using Assembly language. The project includes both **8-bit** and **16-bit** arithmetic operations and verifies their correctness through simulation.
-
----
-
-# 📂 Repository Structure
+# Repository Structure
 
 ```
-Tugas-orkom-8051-Arithmetic-Operation
-│
 ├── 8-bit
 │   ├── add.asm
 │   ├── sub.asm
@@ -27,15 +32,13 @@ Tugas-orkom-8051-Arithmetic-Operation
 ├── 16-bit
 │   ├── add16.asm
 │   ├── sub16.asm
+│   ├── mul16.asm
+│   ├── div16.asm
 │   └── arith16_all.asm
 │
 ├── images
-│   ├── ADD8.jpeg
-│   ├── SUB8.jpeg
-│   ├── MUL8.jpeg
-│   ├── DIV8.jpeg
-│   ├── arith8_all.jpeg
-│   └── arith16_all.jpeg
+│   ├── 8-bit
+│   └── 16-bit
 │
 ├── report
 │   └── laporan.pdf
@@ -45,134 +48,180 @@ Tugas-orkom-8051-Arithmetic-Operation
 
 ---
 
-# 🧮 8-bit Arithmetic Operations
+# 8-bit Arithmetic Operations
 
 ## Addition
 
-| Operand | Result |
-|----------|----------|
-| 25H + 10H | 35H |
+| Item | Description |
+|------|-------------|
+| Operand | 25H + 13H |
+| Result | 38H |
+| Main Instruction | ADD |
+| Output | P1 = 38H |
+| Status | ✅ Success |
 
-**Instruction:** `ADD`
-
-### Simulation Result
-
-![ADD](images/ADD8.jpeg)
+![ADD8](images/8-bit/ADD8.jpeg)
 
 ---
 
 ## Subtraction
 
-| Operand | Result |
-|----------|----------|
-| 25H - 10H | 15H |
+| Item | Description |
+|------|-------------|
+| Operand | 25H - 13H |
+| Result | 12H |
+| Main Instruction | CLR C, SUBB |
+| Output | P1 = 12H |
+| Status | ✅ Success |
 
-**Instruction:** `CLR C` + `SUBB`
-
-### Simulation Result
-
-![SUB](images/SUB8.jpeg)
+![SUB8](images/8-bit/SUB8.jpeg)
 
 ---
 
 ## Multiplication
 
-| Operand | Result |
-|----------|----------|
-| 12H × 04H | 48H |
+| Item | Description |
+|------|-------------|
+| Operand | 12H × 04H |
+| Result | 48H |
+| Main Instruction | MUL AB |
+| Output | P1 = 48H |
+| Status | ✅ Success |
 
-**Instruction:** `MUL AB`
-
-### Simulation Result
-
-![MUL](images/MUL8.jpeg)
+![MUL8](images/8-bit/MUL8.jpeg)
 
 ---
 
 ## Division
 
-| Operand | Result |
-|----------|----------|
-| 25H ÷ 04H | 09H (Remainder = 01H) |
+| Item | Description |
+|------|-------------|
+| Operand | 25H ÷ 04H |
+| Quotient | 09H |
+| Remainder | 01H |
+| Main Instruction | DIV AB |
+| Output | p1_o = 09H, p2_o = 01H |
+| Status | ✅ Success |
 
-**Instruction:** `DIV AB`
-
-### Simulation Result
-
-![DIV](images/DIV8.jpeg)
-
----
-
-## Combined 8-bit Arithmetic
-
-This program combines addition, subtraction, multiplication, and division into a single Assembly program.
-
-### Simulation Result
-
-![Arithmetic8](images/arith8_all.jpeg)
+![DIV8](images/8-bit/DIV8.jpeg)
 
 ---
 
-# 🧮 16-bit Arithmetic Operations
+## Combined 8-bit Program
+
+Program: **arith8_all.asm**
+
+| Item | Description |
+|------|-------------|
+| Program | arith8_all.asm |
+| Operations | ADD, SUB, MUL, DIV (8-bit) |
+| ModelSim Output | p0_o = 35H, p1_o = 15H, p2_o = 48H, p3_o = 09H |
+| Status | ✅ Success |
+
+![Arithmetic8](images/8-bit/arith8_all.jpeg)
+
+---
+
+# 16-bit Arithmetic Operations
 
 ## Addition
 
-| Operand | Result |
-|----------|----------|
-| 1234H + 00F2H | 1326H |
+| Item | Description |
+|------|-------------|
+| Operand | 1234H + 00F2H |
+| Result | 1326H |
+| Main Instruction | ADD, ADDC |
+| Output | p0_o = 26H, p1_o = 13H |
+| Status | ✅ Success |
 
-**Instructions Used:**
-
-- `ADD`
-- `ADDC`
+![ADD16](images/16-bit/ADD16.jpeg)
 
 ---
 
 ## Subtraction
 
-| Operand | Result |
-|----------|----------|
-| 1234H - 00F2H | 1142H |
+| Item | Description |
+|------|-------------|
+| Operand | 1234H - 00F2H |
+| Result | 1142H |
+| Main Instruction | CLR C, SUBB |
+| Output | p0_o = 42H, p1_o = 11H |
+| Status | ✅ Success |
 
-**Instructions Used:**
-
-- `CLR C`
-- `SUBB`
-
----
-
-## Combined 16-bit Arithmetic
-
-This program combines 16-bit addition and subtraction using the carry flag.
-
-### Simulation Result
-
-![Arithmetic16](images/arith16_all.jpeg)
+![SUB16](images/16-bit/SUB16.jpeg)
 
 ---
 
-# 📊 Summary
+## Multiplication
 
-| Operation | Output |
-|------------|------------|
-| 8-bit Addition | 35H |
-| 8-bit Subtraction | 15H |
-| 8-bit Multiplication | 48H |
-| 8-bit Division | 09H |
-| 16-bit Addition | 1326H |
-| 16-bit Subtraction | 1142H |
+| Item | Description |
+|------|-------------|
+| Operand | 0012H × 0004H |
+| Result | 0048H |
+| Method | Software routine (Repeated Addition) |
+| Output | p0_o = 48H, p1_o = 00H |
+| Status | ✅ Success |
+
+![MUL16](images/16-bit/MUL16.jpeg)
 
 ---
 
-# 💻 Development Environment
+## Division
+
+| Item | Description |
+|------|-------------|
+| Operand | 0025H ÷ 0004H |
+| Quotient | 0009H |
+| Remainder | 0001H |
+| Method | Software routine (Repeated Subtraction) |
+| Output | p0_o = 09H, p1_o = 00H, p2_o = 01H, p3_o = 00H |
+| Status | ✅ Success |
+
+![DIV16](images/16-bit/DIV16.jpeg)
+
+---
+
+## Combined 16-bit Program
+
+Program: **arith16_all.asm**
+
+| Item | Description |
+|------|-------------|
+| Operations | ADD 16-bit and SUB 16-bit |
+| ADD Result | 1234H + 00F2H = 1326H |
+| ADD Output | p0_o = 26H, p1_o = 13H |
+| SUB Result | 1234H - 00F2H = 1142H |
+| SUB Output | p2_o = 42H, p3_o = 11H |
+| Status | ✅ Success |
+
+![Arithmetic16](images/16-bit/Arith16_all.jpeg)
+
+---
+
+# Summary
+
+| Operation | Result |
+|-----------|--------|
+| ADD 8-bit | 38H |
+| SUB 8-bit | 12H |
+| MUL 8-bit | 48H |
+| DIV 8-bit | Quotient = 09H, Remainder = 01H |
+| ADD 16-bit | 1326H |
+| SUB 16-bit | 1142H |
+| MUL 16-bit | 0048H |
+| DIV 16-bit | Quotient = 0009H, Remainder = 0001H |
+
+---
+
+# Development Environment
 
 - Intel 8051 Assembly Language
-- Oregano 8051
+- Oregano 8051 Simulator
 - ModelSim
 
 ---
 
-# 📄 Project Report
+# Report
 
 The complete project report is available in:
 
@@ -182,22 +231,17 @@ report/laporan.pdf
 
 The report contains:
 
-- Platform description
-- Program explanation
+- Platform overview
+- Program implementation
 - Simulation procedure
-- Execution results
-- Analysis from the perspective of computer organization and architecture
+- Experimental results
+- Analysis from the perspective of Computer Organization and Architecture
 - Comparison between 8-bit and 16-bit arithmetic operations
 
 ---
 
-# 👨‍💻 Author
+# Author
 
-**- Delviana Namira (24/542446/PA/23029)**
-**- Khonsa Qonita Bahy (24/536263/PA/22753)**
-**- Salima Rodhiyatul Fitriyah (24/539756/PA/22917)**
-**- Sonia Azizah Pramesjvari (24/538796/PA/22873)**
+**Delvi**
 
-Computer Organization Course Project
-
-Intel 8051 Arithmetic Operation
+Computer Organization and Architecture Course Project

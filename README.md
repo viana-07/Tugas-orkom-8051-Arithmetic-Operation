@@ -226,7 +226,7 @@ Program: **arith16_all.asm**
 The complete project report is available in:
 
 ```
-report/laporan.pdf
+Report/Project_Orkom.pdf
 ```
 
 The report contains:
